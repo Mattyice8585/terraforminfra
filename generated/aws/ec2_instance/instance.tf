@@ -7,12 +7,6 @@ resource "aws_instance" "tfer--i-056a1d8fa8bc82a93_TerraForm" {
     capacity_reservation_preference = "open"
   }
 
-  cpu_core_count       = "1"
-  cpu_threads_per_core = "1"
-
-  credit_specification {
-    cpu_credits = "standard"
-  }
 
   disable_api_stop        = "false"
   disable_api_termination = "false"
@@ -57,7 +51,7 @@ resource "aws_instance" "tfer--i-056a1d8fa8bc82a93_TerraForm" {
     volume_type           = "gp2"
   }
 
-  security_groups   = ["launch-wizard-10"]
+  security_groups   = ["sg-058a8ba6cdbcf9f59"]
   source_dest_check = "true"
   subnet_id         = "subnet-36b49918"
 
@@ -82,12 +76,7 @@ resource "aws_instance" "tfer--i-0ca63c1b81065ab94_TESTVM" {
     capacity_reservation_preference = "open"
   }
 
-  cpu_core_count       = "1"
-  cpu_threads_per_core = "1"
 
-  credit_specification {
-    cpu_credits = "standard"
-  }
 
   disable_api_stop        = "false"
   disable_api_termination = "false"
@@ -132,7 +121,7 @@ resource "aws_instance" "tfer--i-0ca63c1b81065ab94_TESTVM" {
     volume_type           = "gp2"
   }
 
-  security_groups   = ["sysadmin-sg"]
+  security_groups   = ["sg-0336c677904a51614"]
   source_dest_check = "true"
   subnet_id         = "subnet-2e7e8863"
 

@@ -21,48 +21,6 @@ resource "aws_security_group" "tfer--AutoScaling-Security-Group-1_sg-0081ba6a3ea
   vpc_id = "vpc-6b5b2911"
 }
 
-resource "aws_security_group" "tfer--Being-0020-Dominate-0020-VPN_sg-0fbe65e818c656b63" {
-  description = "launch-wizard-9 created 2020-12-07T16:33:10.757-05:00"
-
-  egress {
-    cidr_blocks = ["0.0.0.0/0"]
-    from_port   = "0"
-    protocol    = "-1"
-    self        = "false"
-    to_port     = "0"
-  }
-
-  ingress {
-    cidr_blocks      = ["0.0.0.0/0"]
-    description      = "Inbound"
-    from_port        = "443"
-    ipv6_cidr_blocks = ["::/0"]
-    protocol         = "tcp"
-    self             = "false"
-    to_port          = "443"
-  }
-
-  ingress {
-    cidr_blocks      = ["0.0.0.0/0"]
-    description      = "Inbound"
-    from_port        = "80"
-    ipv6_cidr_blocks = ["::/0"]
-    protocol         = "tcp"
-    self             = "false"
-    to_port          = "80"
-  }
-
-  ingress {
-    cidr_blocks = ["0.0.0.0/0"]
-    from_port   = "22"
-    protocol    = "tcp"
-    self        = "false"
-    to_port     = "22"
-  }
-
-  name   = "Being Dominate VPN"
-  vpc_id = "vpc-6b5b2911"
-}
 
 resource "aws_security_group" "tfer--My-0020-First-0020-Security-0020-Group_sg-0f8088c67fd659c27" {
   description = "Created with my first ec2 instance"
